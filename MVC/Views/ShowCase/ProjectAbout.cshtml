@@ -1,0 +1,59 @@
+﻿@model List<EntityLayer.Concrete.ProjectAbout>
+
+<section class="banner-bottom-wthree py-lg-5 py-md-5 py-4" id="about">
+    <div class="container">
+        <div class="inner-sec-w3ls py-lg-5 py-4">
+            <div class="info-about text-center">
+                <h4 class="sub-tittle-w3">Hakkımda</h4>
+                <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3">Proje'de Geliştirme Araçları</h3>
+                <div class="row mt-lg-5 mt-3">
+                    @foreach (var item in Model)
+                    {
+                        var color = "bg-primary"; // default
+
+                        // ProjectName'e göre renk atama
+                        if (item.ProjectName == "SQL Veri Tabanı")
+                        {
+                            color = "bg-danger";
+                        }
+                        else if (item.ProjectName == "C#")
+                        {
+                            color = "bg-success";
+                        }
+                        else if (item.ProjectName == "EntityFramework")
+                        {
+                            color = "bg-info";
+                        }
+                        else if (item.ProjectName == "ASP.NET MVC")
+                        {
+                            color = "bg-warning";
+                        }
+                        else if (item.ProjectName == "Kurumsal Mimari")
+                        {
+                            color = "bg-secondary";
+                        }
+                        else if (item.ProjectName == "Solid Prensipleri")
+                        {
+                            color = "bg-dark";
+                        }
+
+                        <div class="col-lg-4 progress-info-content text-left">
+                            <div class="progress-one my-lg-5" data-aos="fade-up">
+                                <h4 class="progress-tittle-w3">@item.ProjectName</h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated @color"
+                                         role="progressbar"
+                                         style="width:@item.ProjectLevel%">
+                                        @item.ProjectLevel%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

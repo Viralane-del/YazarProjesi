@@ -1,0 +1,60 @@
+﻿@using EntityLayer.Concrete
+@model List<Skill>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*<table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Yetenek</th>
+            <th>Yetenek Durumu</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.SkillID</td>
+                <td>@item.SkillName</td>
+                <td>@item.SkillLevel</td>
+            </tr>
+        }
+    </table>*@
+<div class="main" style="background: url('/AdminLTE-3.0.4/web/images/5.jpg') no-repeat center center fixed; background-size: cover;">
+    <h1>Yeteneklerim Paneli</h1>
+    <div class="main-info w3l">
+        <div class="main-row">
+            <!-- main-row-one -->
+            <div class="profile-grid logo wthree">
+                <img src="~/AdminLTE-3.0.4/web/images/img1.jpg" alt="">
+                <h2>Emir Kale</h2>
+                <p>Balıkesir Bandırma On Yedi Üniversitesi'nde Öğrenci</p>
+
+            </div>
+            <h3 class="title">Yeteneklerim</h3>
+
+
+            <div class="col-md-6 skills-right bar_group" max="100">
+                @foreach (var item in Model)
+                {
+                    <div class='bar_group__bar thin' label='@item.SkillName (@item.SkillLevel%)' value='@item.SkillLevel'></div>
+                }
+            </div>
+
+            <!--bar-js-->
+            <script src="~/AdminLTE-3.0.4/web/js/bars.js"></script>
+            <div class="social-icons agileits">
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#" class="fb"></a></li>
+                    <li><a href="#" class="be"></a></li>
+                    <li><a href="#" class="gg"></a></li>
+                </ul>
+            </div>
+            <div class="clear"> </div>
+        </div>
+    </div>
+</div>
+
+
+

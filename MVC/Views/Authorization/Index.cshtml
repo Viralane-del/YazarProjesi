@@ -1,0 +1,65 @@
+﻿@using EntityLayer.Concrete
+@model List<Admin> 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kullanıcı Mail</th>
+        <th>Yetki</th>
+        <th>Durum</th>
+        <th>Durum Değiştir</th>
+        <th>Yetkisini Değiştir</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AdminID</td>
+            <td>@item.AdminUserName</td>
+            <td>@item.AdminRole</td>
+            <td>
+                @{ string status = "";
+                    string color = "";
+                    if (item.AdminStatus == true)
+                    {
+                        status = "Aktif";
+                        color = "text-success";
+                    }
+                    else
+                    {
+                        status = "Pasif";
+                        color = "text-danger";
+                    }
+                    <p class="@color">@status</p>
+                }
+            </td>
+            <td>
+                @{
+                    if (item.AdminStatus == true)
+                    {
+                        <a class="btn btn-danger btn-sm" href="/Authorization/DeleteAdmin/@item.AdminID">
+                            <i class="fas fa-trash">
+                            </i>
+                            Pasif Yap
+                        </a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-success btn-sm" href="/Authorization/DeleteAdmin/@item.AdminID">
+                            <i class="fas fa-trash">
+                            </i>
+                            Aktif Yap
+                        </a>
+                    }
+                }
+            </td>
+            <td><a href="/Authorization/EditAdmin/@item.AdminID" class="btn btn-warning">Yetkisini Değiştir</a></td>
+        </tr>
+    }
+</table>
+<a href="/Authorization/AddAdmin/" class="btn btn-info">Yeni Admin Tanımla</a>
+

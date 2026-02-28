@@ -1,0 +1,63 @@
+﻿@using EntityLayer.Concrete
+@model List<Category>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<table class="table table-bordered">
+    <tr>
+        <td>#</td>
+        <td>Kategori Adı</td>
+        <td>Durum</td>
+        <td>Başlıklar</td>
+        <td>Güncelle</td>
+        <td>Sil</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CategoryID</td>
+            <td>@item.CategoryName</td>
+            <td>
+                @{ string status = "";
+                    string color = "";
+                    if (item.CategoryStatus == true)
+                    {
+                        status = "Aktif";
+                        color = "text-success";
+                    }
+                    else
+                    {
+                        status = "Pasif";
+                        color = "text-danger";
+                    }
+                    <p class="@color">@status</p>
+                }
+            </td>
+            <td><a href="#" class="btn btn-outline-dark">Başlıklar</a></td>
+            <td><a href="/AdminCategory/EditCategory/@item.CategoryID" class="btn btn-outline-warning">Güncelle</a></td>
+            <td>
+                @{
+                    if (item.CategoryStatus == true)
+                    {
+                        <a class="btn btn-danger btn-sm" href="/AdminCategory/DeleteCategory/@item.CategoryID">
+                            <i class="fas fa-trash">
+                            </i>
+                            Pasif Yap
+                        </a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-success btn-sm" href="/AdminCategory/DeleteCategory/@item.CategoryID">
+                            <i class="fas fa-trash">
+                            </i>
+                            Aktif Yap
+                        </a>
+                    }
+                }
+            </td>
+        </tr>
+    }
+</table>
+<a href="/AdminCategory/AddCategory" class="btn btn-outline-info">Yeni Kategori</a>

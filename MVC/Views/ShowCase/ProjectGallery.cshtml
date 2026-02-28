@@ -1,0 +1,25 @@
+﻿@model List<EntityLayer.Concrete.ProjectGallery> 
+<section class="gallery py-md-5 py-3" id="projects">
+    <div class="gallery-inner container py-md-5 pb-3">
+        <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">Projeden Görseller</h3>
+        <div class="row">
+            @foreach(var item in Model)
+            {
+
+            <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+                <div class="section_1_gallery_grid">
+                    <a title="@item.ProjectName" href="@Url.Content(item.ProjectImageURL)">
+                        <div class="section_1_gallery_grid1">
+                            <img src="@Url.Content(item.ProjectImageURL)" alt="@item.ProjectName" class="img-fluid" />
+                            <div class="proj_gallery_grid1_pos">
+                                <h3>@item.ProjectName</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        </div>
+            }
+        <!-- //gallery container -->
+    </div>
+    
+</section>

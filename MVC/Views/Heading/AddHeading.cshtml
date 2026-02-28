@@ -1,0 +1,26 @@
+﻿@model EntityLayer.Concrete.Heading
+@{
+    ViewBag.Title = "AddHeading";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Başlık Ekleme Paneli</h2>
+<br />
+@using (Html.BeginForm("AddHeading", "Heading", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.HeadingName, "Başlık Adı")
+        @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control", placeholder = "Başlık Adını Giriniz" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.CategoryID, "Kategori Seçimi")
+        @Html.DropDownListFor(x => x.CategoryID, (IEnumerable<SelectListItem>)ViewBag.vlc, "Kategori Seçiniz", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.WriterID, "Yazar")
+        @Html.DropDownListFor(x => x.CategoryID, (IEnumerable<SelectListItem>)ViewBag.vlw, "Yazar Seçiniz", new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Başlığı Ekle</button>
+}
+
+
