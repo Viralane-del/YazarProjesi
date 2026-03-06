@@ -1,38 +1,36 @@
-🚀 Yeni MVC Yazar & İçerik Yönetim Platformu projem yayında!
-ASP.NET MVC ile geliştirdiğim Ekşi Sözlük benzeri içerik yönetim sistemini sizlerle paylaşmaktan mutluluk duyuyorum! 
+🚀 My New MVC Author & Content Management Platform Project is Live!
+I'm excited to share the Ekşi Sözlük-inspired content management system I built with ASP.NET MVC!
 
-✍️📚Bu projede, yazarların kendi içeriklerini yönetebileceği ve okuyucuların sade bir arayüzde yazılara ulaşabileceği modern bir tartışma platformu geliştirdim.
+✍️📚 In this project, I developed a modern discussion platform where authors can manage their own content and readers can access articles through a clean, organized sections layout.
 
-✍️ Yazar Özellikleri
-🔹 Kişisel İçerik Yönetimi → Yazarlar kendi yazılarını görüntüleyebilir, düzenleyebilir ve silebilir
-🔹 Yeni İçerik Oluşturma → Başlık ve entry bazlı yazı ekleme sistemi
-🔹 Yazar Paneli → Kişiye özel dashboard ile içerik istatistikleri
-🔹 Giriş & Yetkilendirme → Güvenli authentication sistemi
+✍️ Author Features
+🔹 Personal Content Management → Authors can view, edit, and archive their own posts
+🔹 New Content Creation → Article submission system based on title and entry
+🔹 Author Dashboard → Personalized control panel with content statistics
+🔹 Login & Authorization → Secure authentication system
 
-📖 Okuyucu Deneyimi
-🔹 Ekşi Sözlük Benzeri Arayüz → Sade ve kullanıcı dostu içerik akışı
-🔹 Başlık Tabanlı Gezinme → Kolay içerik keşfi ve okuma deneyimi
-🔹 Responsive Tasarım → Tüm cihazlarda sorunsuz kullanım
+📖 Reader Experience
+🔹 Ekşi Sözlük-Like Interface → Clean and user-friendly content browsing
+🔹 Title-Based Navigation → Easy content discovery and reading experience
+🔹 Responsive Design → Seamless usage across all devices
 
-⚙️ Yönetici Paneli
-🔹 Tam CRUD İşlemleri → Yazarlar, başlıklar ve içerikler üzerinde eksiksiz kontrol
-🔹 İçerik Moderasyonu → Yayın onay ve düzenleme yetkileri
-🔹 Kullanıcı Yönetimi → Yazar hesaplarını yönetme ve rol atama
+⚙️ Admin Panel
+🔹 Full CRUD Operations → Complete control over authors, titles, and content
+🔹 Content Moderation → Publishing oversight and editing permissions
+🔹 User Management → Managing author accounts and assigning roles
 
+🏗️ Technical Infrastructure
+✅ ASP.NET MVC architecture
+✅ Data management with Entity Framework
+✅ SQL Server database
+✅ Layered architecture (Model - View - Controller)
+✅ Authentication & Authorization system
+✅ Responsive user interface
+✅ RESTful architecture
 
-🏗️ Teknik Altyapı
-✅ ASP.NET MVC mimarisi
-✅ Entity Framework ile veri yönetimi
-✅ SQL Server veritabanı
-✅ Katmanlı mimari (Model - View - Controller)
-✅ Authentication & Authorization sistemi
-✅ Responsive kullanıcı arayüzü
-✅ RESTful yapı prensipleri
+🎯 Goal: Inspired by Ekşi Sözlük and similar platforms, the aim was to build an interactive discussion platform where authors can freely manage their content and readers can enjoy a seamless browsing experience.
+💡 Through this project, I combined both back-end and front-end development experience to deliver a fully-featured web application covering all the core fundamentals of a real content platform.
+🔗 Feel free to reach out for more details about the project!
 
-🎯 Amaç: Ekşi Sözlük ve benzeri platformlardan esinlenerek, yazarların içeriklerini özgürce yönetebildiği, okuyucuların keyifle gezinebildiği interaktif bir tartışma platformu oluşturmak.
-💡 Bu proje ile hem backend hem frontend geliştirme deneyimini birleştirerek, gerçek bir içerik platformunun tüm temel bileşenlerini barındıran tam kapsamlı bir web uygulaması ortaya koydum.
-🔗 Proje detaylarına ulaşmak için benimle iletişime geçebilirsiniz!ı bir web uygulamasıdır.
-
-📺 Eğitim İçin: Murat Yücedağ - Udemy
-
-Bu proje eğitim amaçlı geliştirilmiştir. © 2025
+📺 For Educational Purposes: Murat Yücedağ — Udemy
+This project is intended for educational purposes. © 2025
